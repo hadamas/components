@@ -1,0 +1,122 @@
+/* Demo page styles. Not needed to use the component. */
+body {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+.demo {
+  --fg: #26262c;
+  --line: rgba(38, 38, 44, 0.18);
+  --panel: rgba(244, 243, 248, 0.74);
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 32px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--fg);
+}
+
+.demo-dark {
+  --fg: #f1f0f6;
+  --line: rgba(241, 240, 246, 0.2);
+  --panel: rgba(48, 48, 54, 0.74);
+}
+
+.intro {
+  max-width: 680px;
+  padding-bottom: 40px;
+}
+
+.intro h1 {
+  margin: 0 0 20px;
+  font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(48px, 9vw, 116px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.intro p {
+  margin: 0 0 20px;
+  max-width: 38ch;
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Quiet pill button, same look as the Settings toggle. */
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  opacity: 0.6;
+  transition: opacity 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.ghost:hover,
+.ghost:focus-visible {
+  opacity: 1;
+  border-color: var(--line);
+  background: var(--panel);
+}
+
+.ghost:focus-visible {
+  outline: 2px solid #6987f4;
+  outline-offset: 2px;
+}
+
+/* "Hide text" only shows while hovering the intro. */
+.hide {
+  margin-left: -10px;
+  opacity: 0;
+}
+
+.intro:hover .hide {
+  opacity: 0.6;
+}
+
+.intro:hover .hide:hover,
+.hide:focus-visible {
+  opacity: 1;
+}
+
+.show {
+  position: fixed;
+  left: 22px;
+  bottom: 16px;
+}
+
+.github {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+
+/* No hover on touch screens: keep the button visible. */
+@media (hover: none) {
+  .hide {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 600px) {
+  .demo {
+    padding: 20px;
+  }
+
+  .intro {
+    padding-bottom: 56px;
+  }
+
+  .show {
+    left: 10px;
+  }
+}
