@@ -94,10 +94,31 @@ body {
   bottom: 16px;
 }
 
-.github {
+/* Bottom right corner: credit and GitHub link. */
+.corner {
   position: fixed;
   right: 16px;
   bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.credit {
+  font-size: 11px;
+  opacity: 0.55;
+}
+
+.credit a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.credit a:hover,
+.credit a:focus-visible {
+  border-color: currentColor;
 }
 
 /* No hover on touch screens: keep the button visible. */
