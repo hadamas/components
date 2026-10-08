@@ -1,6 +1,6 @@
 # wave-background
 
-
+<img src="src/images/waves-of-light.png" alt="projetc img" />
 
 An animated background of soft light and shadow waves with grain, drawn over a solid color. It looks like sunlight moving on the sea floor.
 
