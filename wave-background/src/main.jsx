@@ -9,7 +9,7 @@ const GITHUB_URL = 'https://github.com/hadamas/components/tree/main/wave-backgro
 
 // Demo page: background, settings panel and a short intro.
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const [introHidden, setIntroHidden] = useState(false);
   // reducedMotion "full": animate even when the OS asks for reduced motion
   const initial = { ...DEFAULTS, ...THEMES[theme], reducedMotion: 'full' };
