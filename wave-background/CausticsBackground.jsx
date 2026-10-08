@@ -214,7 +214,7 @@ export const THEMES = {
   dark: { background: '#3c3c43', light: '#dedcf2' },
 };
 
-export default function CausticsBackground({ theme = 'light', className, style, ...options }) {
+export default function CausticsBackground({ theme = 'dark', className, style, ...options }) {
   const canvas = useRef(null);
   const fx = useRef(null);
   const merged = { ...THEMES[theme], ...options };
