@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&display=swap");
+
+body {
+  --fg: #26262c;
+  --bg: #eae9f0;
+  --line: rgba(38, 38, 44, 0.18);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 32px 32px 72px;
+  font: 13px/1.6 ui-monospace, Menlo, Consolas, monospace;
+  color: var(--fg);
+  background: var(--bg); /* shown if WebGL is unavailable */
+}
+
+body[data-theme="dark"] {
+  --fg: #f1f0f6;
+  --bg: #3c3c43;
+  --line: rgba(241, 240, 246, 0.2);
+}
+
+/* The effect: a canvas fixed behind the content. */
+#waves {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+main {
+  max-width: 680px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(48px, 9vw, 116px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 20px;
+  max-width: 38ch;
+  font-size: clamp(14px, 1.3vw, 17px);
+  opacity: 0.8;
+}
+
+button {
+  padding: 6px 12px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+button:hover {
+  border-color: currentColor;
+}
+
+footer {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
